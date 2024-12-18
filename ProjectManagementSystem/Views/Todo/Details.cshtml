@@ -1,0 +1,219 @@
+﻿@model Models.Models.Todo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<style>
+    /* Container for the entire comment section */
+    .comment-section {
+        width: 50%;
+        margin: 20px 0px 0px 0px;
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling the input area */
+    .comment-input textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        resize: vertical; /* Allow vertical resizing only */
+    }
+
+    .comment-input button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        border: none;
+        background-color: #28a745;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .comment-input button:hover {
+            background-color: #218838;
+        }
+
+    /* Styling the comment display area */
+    .comments-display {
+        margin-top: 30px;
+        max-height: 300px; /* Set the max height for the scrollable area */
+        overflow-y: auto; 
+    }
+
+    .comment {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .comment-user {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .comment-text {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .comment-time {
+        font-size: 12px;
+        color: #777;
+    }
+
+    /* Adding a bit of spacing between elements */
+    textarea {
+        margin-bottom: 10px;
+    }
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.0/signalr.min.js"></script>
+<script>
+    const todoId = @Model.Id;
+
+        // Initialize SignalR connection
+        const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/commentHub")
+        .build();
+
+        // Start the SignalR connection and join the group
+        connection.start().then(() => {
+            return connection.invoke("JoinTodoGroup", todoId);
+        }).catch(err => console.error("SignalR connection error: ", err));
+
+        // Listen for new comments from the server
+        connection.on("ReceiveComment", (user, commentContent, commentTodoId, createdAt) => {
+            if (commentTodoId === todoId) {
+                const commentsDiv = document.getElementById("comments");
+                const comment = document.createElement("div");
+                comment.classList.add("comment");
+                comment.innerHTML = `
+                <p class="comment-user">${user}</p>
+                <p class="comment-text">${commentContent}</p>
+                <small class="comment-time">Posted on ${createdAt}</small>`;
+            commentsDiv.insertBefore(comment, commentsDiv.firstChild);
+        }
+        });
+
+        // Handle form submission for sending comments
+        function submitComment() {
+        var commentContent = document.getElementById("CommentSection").value;
+        if (isNotEmptyOrWhitespace(commentContent)) {
+            if (connection.state === signalR.HubConnectionState.Connected) 
+            {
+                connection.invoke("SendComment", todoId, commentContent)
+                .catch(err => console.error("Error invoking SendComment: ", err));
+            }
+            else 
+            {
+                console.error("SignalR connection is not established.");
+                alert("error");
+            }
+        }
+        else
+        {
+            alert("Comment can not be empty");
+        }
+        }
+    function isNotEmptyOrWhitespace(input) {
+        return input !== null && input !== undefined && input.trim() !== "";
+    }
+</script>
+<div>
+    <h4>Todo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Employee.UserName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Project)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Project.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
+
+
+<div class="comment-section">
+    <!-- Comment input area -->
+    <form id="commentForm">
+        <div class="comment-input">
+            <textarea id="CommentSection" name="CommentSection" placeholder=" Write your comment here..." rows="4"></textarea>
+            <button type="submit" class="btn btn-success" onclick="submitComment()">Submit</button>
+        </div>
+    </form>
+    <!-- Display area for comments -->
+    <div id="comments" class="comments-display">
+        <!-- Individual Comment -->
+        @foreach (var comment in Model.Comments.OrderByDescending(i => i.CreatedAt))
+        {
+            <div class="comment">
+                <div class="row">
+                    <div class="col-11"><p class="comment-user">@comment.Employee.FirstName</p></div>
+                    @{
+                        if (User.Identity?.Name == comment.Employee.UserName)
+                        {
+                            <div class="col-1"><a asp-action="DeleteComment" asp-route-id="@comment?.Id" asp-route-todoId="@Model?.Id"><i class="bi bi-trash"></i></a></div>
+                        }
+                        else
+                        {
+                            <div class="col-1"><a asp-action="ReportComment" asp-route-id="@comment?.Id" asp-route-todoId="@Model?.Id"><i class="bi bi-flag"></i></a></div>
+                        }
+                    }
+                </div>
+                
+                <p class="comment-text">@comment.CommentContent</p>
+                <small class="comment-time">Posted on @comment.CreatedAt.ToString("dd/MM/yyyy")</small>
+            </div>
+        }
+    </div>
+</div>

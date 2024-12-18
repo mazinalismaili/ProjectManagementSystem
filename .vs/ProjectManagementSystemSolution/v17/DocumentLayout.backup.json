@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|c:\\users\\mazin\\source\\repos\\projectmanagementsystemsolution\\projectmanagementsystem\\hubs\\commenthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|solutionrelative:projectmanagementsystem\\hubs\\commenthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|c:\\users\\mazin\\source\\repos\\projectmanagementsystemsolution\\projectmanagementsystem\\views\\todo\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|solutionrelative:projectmanagementsystem\\views\\todo\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|c:\\users\\mazin\\source\\repos\\projectmanagementsystemsolution\\projectmanagementsystem\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|solutionrelative:projectmanagementsystem\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|c:\\users\\mazin\\source\\repos\\projectmanagementsystemsolution\\projectmanagementsystem\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|solutionrelative:projectmanagementsystem\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|c:\\users\\mazin\\source\\repos\\projectmanagementsystemsolution\\projectmanagementsystem\\views\\todo\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03EFDF36-B6A4-4904-A0D5-874E7CFDE346}|ProjectManagementSystem\\ProjectManagementSystem.csproj|solutionrelative:projectmanagementsystem\\views\\todo\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CommentHub.cs",
+              "DocumentMoniker": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Hubs\\CommentHub.cs",
+              "RelativeDocumentMoniker": "ProjectManagementSystem\\Hubs\\CommentHub.cs",
+              "ToolTip": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Hubs\\CommentHub.cs",
+              "RelativeToolTip": "ProjectManagementSystem\\Hubs\\CommentHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T18:38:56.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StatusController.cs",
+              "DocumentMoniker": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Controllers\\StatusController.cs",
+              "RelativeDocumentMoniker": "ProjectManagementSystem\\Controllers\\StatusController.cs",
+              "ToolTip": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Controllers\\StatusController.cs",
+              "RelativeToolTip": "ProjectManagementSystem\\Controllers\\StatusController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T12:35:21.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Views\\Todo\\Delete.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementSystem\\Views\\Todo\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Views\\Todo\\Delete.cshtml",
+              "RelativeToolTip": "ProjectManagementSystem\\Views\\Todo\\Delete.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T12:28:54.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Views\\Todo\\Details.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementSystem\\Views\\Todo\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Views\\Todo\\Details.cshtml",
+              "RelativeToolTip": "ProjectManagementSystem\\Views\\Todo\\Details.cshtml",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswGQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T10:54:08.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TodoController.cs",
+              "DocumentMoniker": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Controllers\\TodoController.cs",
+              "RelativeDocumentMoniker": "ProjectManagementSystem\\Controllers\\TodoController.cs",
+              "ToolTip": "C:\\Users\\Mazin\\source\\repos\\ProjectManagementSystemSolution\\ProjectManagementSystem\\Controllers\\TodoController.cs",
+              "RelativeToolTip": "ProjectManagementSystem\\Controllers\\TodoController.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAswLkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T10:54:04.884Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

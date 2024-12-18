@@ -1,0 +1,11 @@
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\bin\Debug\net8.0\Utility.deps.json
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\bin\Debug\net8.0\Utility.dll
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\bin\Debug\net8.0\Utility.pdb
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\Utility.AssemblyInfoInputs.cache
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\Utility.AssemblyInfo.cs
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\Utility.csproj.CoreCompileInputs.cache
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\Utility.dll
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\refint\Utility.dll
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\Utility.pdb
+C:\Users\Mazin\source\repos\ProjectManagementSystemSolution\Utility\obj\Debug\net8.0\ref\Utility.dll
